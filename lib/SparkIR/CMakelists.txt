@@ -1,0 +1,16 @@
+add_mlir_dialect_library(MLIRSparkIR
+        SparkIRDialect.cpp
+        SparkIROps.cpp
+        SparkIRTypes.cpp
+
+        ADDITIONAL_HEADER_DIRS
+        ${PROJECT_SOURCE_DIR}/include/SparkIR
+
+        DEPENDS
+        MLIRSparkIROpsIncGen
+
+        LINK_LIBS PUBLIC
+        MLIRIR
+        MLIRInferTypeOpInterface
+        MLIRFuncDialect
+        )
