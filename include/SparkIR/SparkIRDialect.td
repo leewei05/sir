@@ -8,13 +8,7 @@ def SparkIR_Dialect : Dialect {
     let summary = "An educational out-of-tree MLIR dialect.";
     let description = [{ yes sir }];
     let cppNamespace = "::mlir::sparkir";
-
-    let useDefaultTypePrinterParser = 1;
-    let extraClassDeclaration = [{
-        void registerTypes();
-    }];
 }
-
 
 class SparkIR_Op<string mnemonic, list<Trait> traits = []> :
         Op<SparkIR_Dialect, mnemonic, traits>;

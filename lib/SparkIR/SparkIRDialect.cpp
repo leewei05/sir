@@ -12,5 +12,4 @@ void SparkIRDialect::initialize() {
 #define GET_OP_LIST
 #include "SparkIR/SparkIROps.cpp.inc"
       >();
-  registerTypes();
 }
