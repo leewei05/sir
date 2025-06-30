@@ -7,9 +7,9 @@ set(LIBS
         MLIROptLib
         MLIRSparkIR
         )
-add_llvm_executable(spark-ir-opt spark-ir-opt.cpp PARTIAL_SOURCES_INTENDED)
+add_llvm_executable(sparkir-opt sparkir-opt.cpp PARTIAL_SOURCES_INTENDED)
 
-llvm_update_compile_flags(spark-ir-opt)
-target_link_libraries(spark-ir-opt PRIVATE ${LIBS})
+llvm_update_compile_flags(sparkir-opt)
+target_link_libraries(sparkir-opt PRIVATE ${LIBS})
 
-mlir_check_all_link_libraries(spark-ir-opt)
+mlir_check_all_link_libraries(sparkir-opt)
