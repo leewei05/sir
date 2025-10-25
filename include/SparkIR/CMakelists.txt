@@ -1,3 +1,0 @@
-add_mlir_dialect(SparkIROps sparkir)
-add_mlir_doc(SparkIRDialect SparkIRDialect SparkIR/ -gen-dialect-doc)
-add_mlir_doc(SparkIROps SparkIROps SparkIR/ -gen-op-doc)

@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.rhm": "racket",
+    "*.inc": "cpp"
+  }
+}

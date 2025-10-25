@@ -1,0 +1,16 @@
+add_mlir_dialect_library(MLIRSIR
+        SIRDialect.cpp
+        SIROps.cpp
+        SIRTypes.cpp
+
+        ADDITIONAL_HEADER_DIRS
+        ${PROJECT_SOURCE_DIR}/include/SIR
+
+        DEPENDS
+        MLIRSIROpsIncGen
+
+        LINK_LIBS PUBLIC
+        MLIRIR
+        MLIRInferTypeOpInterface
+        MLIRFuncDialect
+        )

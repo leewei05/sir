@@ -7,11 +7,11 @@ set(LIBS
         MLIRRegisterAllDialects
         MLIRArithDialect
         MLIROptLib
-        MLIRSparkIR
+        MLIRSIR
         )
-add_llvm_executable(sparkir-opt sparkir-opt.cpp PARTIAL_SOURCES_INTENDED)
+add_llvm_executable(sir-opt sir-opt.cpp PARTIAL_SOURCES_INTENDED)
 
-llvm_update_compile_flags(sparkir-opt)
-target_link_libraries(sparkir-opt PRIVATE ${LIBS})
+llvm_update_compile_flags(sir-opt)
+target_link_libraries(sir-opt PRIVATE ${LIBS})
 
-mlir_check_all_link_libraries(sparkir-opt)
+mlir_check_all_link_libraries(sir-opt)

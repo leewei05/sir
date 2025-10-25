@@ -1,5 +1,5 @@
-#ifndef SPARKIR_SPARKIROPS_H
-#define SPARKIR_SPARKIROPS_H
+#ifndef SIR_SIROPS_H
+#define SIR_SIROPS_H
 
 #include "mlir/IR/BuiltinTypes.h"
 #include "mlir/IR/Dialect.h"
@@ -8,6 +8,6 @@
 #include "mlir/Interfaces/SideEffectInterfaces.h"
 
 #define GET_OP_CLASSES
-#include "SparkIR/SparkIROps.h.inc"
+#include "SIR/SIROps.h.inc"
 
-#endif // SPARKIR_SPARKIROPS_H
+#endif // SIR_SIROPS_H

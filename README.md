@@ -13,7 +13,7 @@ cmake -G Ninja ../llvm \
 ninja install
 ```
 
-Build SparkIR
+Build SIR
 
 ```sh
 mkdir build && cd build

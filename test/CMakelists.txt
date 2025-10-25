@@ -1,4 +1,4 @@
-set(SPARKIR_TOOLS_DIR "${CMAKE_BINARY_DIR}/tools")
+set(SIR_TOOLS_DIR "${CMAKE_BINARY_DIR}/tools")
 
 configure_lit_site_cfg(
         ${CMAKE_CURRENT_SOURCE_DIR}/lit.site.cfg.py.in
@@ -7,15 +7,15 @@ configure_lit_site_cfg(
         ${CMAKE_CURRENT_SOURCE_DIR}/lit.cfg.py
 )
 
-set(SPARKIR_TEST_DEPENDS
-        sparkir-opt
+set(SIR_TEST_DEPENDS
+        sir-opt
         )
 
-add_lit_testsuite(check-sparkir "Running the sparkir regression tests"
+add_lit_testsuite(check-sir "Running the SIR regression tests"
         ${CMAKE_CURRENT_BINARY_DIR}
-        DEPENDS ${SPARKIR_TEST_DEPENDS}
+        DEPENDS ${SIR_TEST_DEPENDS}
         )
 
-set_target_properties(check-sparkir PROPERTIES FOLDER "Tests")
+set_target_properties(check-sir PROPERTIES FOLDER "Tests")
 
-add_lit_testsuites(SPARKIR ${CMAKE_CURRENT_SOURCE_DIR} DEPENDS ${SPARKIR_TEST_DEPENDS})
+add_lit_testsuites(SIR ${CMAKE_CURRENT_SOURCE_DIR} DEPENDS ${SIR_TEST_DEPENDS})

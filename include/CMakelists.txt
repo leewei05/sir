@@ -1,1 +1,1 @@
-add_subdirectory(SparkIR)
+add_subdirectory(SIR)

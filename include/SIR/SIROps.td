@@ -1,14 +1,14 @@
-#ifndef SPARKIR_OPS
-#define SPARKIR_OPS
+#ifndef SIR_OPS
+#define SIR_OPS
 
-include "SparkIR/SparkIRTypes.td"
+include "SIR/SIRTypes.td"
 include "mlir/Interfaces/InferTypeOpInterface.td"
 include "mlir/Interfaces/SideEffectInterfaces.td"
 
-def SparkIR_FooOp : SparkIR_Op<"foo", [Pure, SameOperandsAndResultType]> {
+def SIR_FooOp : SIR_Op<"foo", [Pure, SameOperandsAndResultType]> {
     let summary = "Illustrates how to define an operation.";
     let description = [{
-        The `sparkir.foo` operation illustrates how to define a new
+        The `sir.foo` operation illustrates how to define a new
         operation in a dialect. It uses an operation trait to declare that it
         has no side effects.
 
@@ -19,7 +19,7 @@ def SparkIR_FooOp : SparkIR_Op<"foo", [Pure, SameOperandsAndResultType]> {
         ```mlir
         %0 = arith.constant 2 : i32
         // Apply the foo operation to %0
-        %1 = sparkir.foo %0 : i32
+        %1 = sir.foo %0 : i32
         ```
     }];
 
@@ -31,4 +31,4 @@ def SparkIR_FooOp : SparkIR_Op<"foo", [Pure, SameOperandsAndResultType]> {
     }];
 }
 
-#endif // SPARKIR_OPS
+#endif // SIR_OPS

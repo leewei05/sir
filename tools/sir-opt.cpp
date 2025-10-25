@@ -4,13 +4,13 @@
 #include "mlir/Support/FileUtilities.h"
 #include "mlir/Tools/mlir-opt/MlirOptMain.h"
 
-#include "SparkIR/SparkIRDialect.h"
+#include "SIR/SIRDialect.h"
 
 int main(int argc, char **argv) {
   mlir::registerAllPasses();
 
   mlir::DialectRegistry registry;
-  registry.insert<mlir::sparkir::SparkIRDialect>();
+  registry.insert<mlir::sir::SIRDialect>();
   return mlir::asMainReturnCode(
-      mlir::MlirOptMain(argc, argv, "SparkIR optimizer driver\n", registry));
+      mlir::MlirOptMain(argc, argv, "SIR optimizer driver\n", registry));
 }
